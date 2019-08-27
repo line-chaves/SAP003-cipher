@@ -4,20 +4,23 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Pacifico&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet"> 
   </head>
   <body>
-    <div id="root">
-      <h2 id="tit"> Palavra secreta </h2>
+      <h2 id="tit"> A Palavra Secreta </h2>
+    <div>
       <form>
-        <div> Digite a palavra:</div><br>
-      <input type="text" id="str" class="str"/><br>
-      <div> Digite um número: </div><br>
-      <input type="number" id="num" min="0" class="num"/><br> <br>
-     <input type="submit" id="btncodificar" value="Codificar" onclick="encodein()" class="botao"/>
-     <input type="submit" id="btndecodificar" value="Descodificar" class="botao" onclick="decodein()"/>
+        <div> Digite a palavra:</div>
+      <input type="text" id="str" class="caixainput"/><br><br>
+      <div> Digite um número: </div>
+      <input type="number" id="num"  class="caixainput"/><br><br>
+     <input type="submit" id="btncodificar" value="Codificar" class="botao"/>
+     <input type="submit" id="btndecodificar" value="Descodificar" class="botao"/>
       </form>
-      <div> <p id="retorno" class="palavra"></p></div>
     </div>
+    <span> <p id="retorno" class="palavra"></p></span>
+    <span>Aline</span>
     </body>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

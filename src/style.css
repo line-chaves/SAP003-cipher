@@ -1,47 +1,58 @@
+body{
+  background-image: url(/home/laboratoria/Downloads/violencia-contra-mulher_3_0.jpg);
+  background-attachment: fixed; /* vai fixar a imagem, se acaso o usuario diminuir o zoom da pagina, a imagem não ira junto*/
+  background-repeat: 100%; /* a imagem vai se ajustar a pagina*/
+  background-repeat: no-repeat;/* não vai reppetir*/
+  background-position: 1200% 40%;
+}
 #tit {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(102, 25, 25);
+    font-family: 'Pacifico', cursive; /*altera a fonte do titulo*/
+    color:rgba(146, 17, 151, 0.904);
      text-align: center;
-     width:323px;
-     margin: 55px 0 0 470px;
+     width:360px;/*largura*/
+     height: 70px;/*altura*/
+     margin: 30px 0 0 470px;
+     font-size: 1cm;
    }
    .botao{
      border-radius:15px;
-     font-family:Arial, Helvetica, sans-serif;
-     font-size:0.5cm;
+     font-family: 'Amatic SC', cursive;
+     font-size:26px;
      text-align: center;
-     margin-left: auto;
-     margin-right: auto;
-     
+     margin: 15px 15px 15px 15px;
+     color: #f06abc;
+     border: 3px ridge black;
    }
-   .str{
-   border-radius:10px;
-   font-size:0.6cm;
-    text-align: center;
-    margin-left: 
-   }
-   .num{
+   .caixainput{
    border-radius:10px;/*arredondou as bordas*/
    font-size:0.6cm; 
-   text-align: center; 
+   text-align: center;
+   margin: 10px 0 0 0px; 
+   border: 3px ridge black;
    }
    form{
          text-align: center;
          width:323px;
-         margin: 45px 0 0 470px; /*a primeira parte negativa ajudou a subir a caixa. alterando a propriedade do meio, a caixa desce para a direita. o ultimo atributo, a caixa se move para a direita.*/
+         margin: 30px 0 0 470px;/*a primeira parte negativa ajudou a subir a caixa. alterando a propriedade do meio, a caixa desce para a direita. o ultimo atributo, a caixa se move para a direita.*/
    }
    .palavra{
-   border:2px dashed #dc95e9ec; /*tamanho da borda ... tipo de borda... cor da borda*/
-    background: rgb(227, 247, 247);
-     width: 170px; /*largura*/
-     height: 40px; /*altura*/  
-     margin: 40px 0 0 547px;
-     color:black;
+   border:5px groove #3b0303ec; /*tamanho da borda ... tipo de borda... cor da borda*/
+    background: rgba(139, 36, 79, 0.781);
+     width: 250px; /*largura*/
+     height: 60px; /*altura*/  
+     color:  rgb(233, 235, 240);
+     text-align: center;
+     margin: 15px 0px 0 505px;
+     line-height: 50px;
+     font-size: 0.5cm;
    }
-   .num:hover{
-    background-color: rgb(188, 216, 243);
+   .botao:hover{
+    background-color: rgb(1, 7, 12);
    }
-   .str:hover{
-     background-color: rgb(188, 216, 243);
+   div{
+     color: rgb(71, 3, 40);
+     font-family: 'Amatic SC', cursive;
+     font-size: 0.8cm;
    }
+   
    /*readonly*/

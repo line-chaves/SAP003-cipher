@@ -1,42 +1,51 @@
 window.cipher = {
-  encode: function(offset,string){
-    let retorno = ""
-    for( i = 0; i < string.length; i++){
-      let word = string[i];
-      let wordNum = word.charCodeAt(0); //obtendo o codigo asc 
-      wordNum = parseInt(wordNum);
-      let asc = ((wordNum-65+offset)%26+65);
-      wordstr= String.fromCharCode(asc);//tranformando o asc em char
-      retorno += wordstr
+  encode: encode,
+  decode: decode
+};
+//função encode
+function encode(offset, mensagem) {
+  let retorno = "";
+
+  //laço de repetição
+  for (let i = 0; i < mensagem.length; i++) {
+    let codigoAsc = mensagem.charCodeAt(i);
+    //inicio da condição.
+    //letra maiuscula
+    if (codigoAsc >= 65 && codigoAsc <= 90) {
+      retorno += String.fromCharCode(((mensagem.charCodeAt(i) - 65 + offset) % 26) + 65);
+    }
+    //letra minuscula
+    else if (codigoAsc >= 97 && codigoAsc <= 122) {
+      retorno += String.fromCharCode(((codigoAsc - 97 + offset) % 26) + 97);
+    }
+    //caractere especial e numeros
+    else {
+      (codigoAsc >= 32 && codigoAsc <= 64);
+      retorno += String.fromCharCode(codigoAsc);
     }
   }
-  decode:decode
-  
-  // ... 
-};
-encode: function(offset,string){
-  let retorno = ""
-  for( i = 0; i < string.length; i++){
-    let word = string[i];
-    let wordNum = word.charCodeAt(0); //obtendo o codigo asc 
-    wordNum = parseInt(wordNum);
-    let asc = ((wordNum-65+offset)%26+65);
-    wordstr= String.fromCharCode(asc);//tranformando o asc em char
-    retorno += wordstr
-  /*posso usar toUpperCase transformar em maiuscula.. .lenght para para pegar o tamanho da string(eu acho)... 
-  charCodeAt() vai retornar o codigo da letra... String. ...fromCharCode... toLowerCase() vou sar para transformar em minuscula... 
-  push para empurrar um valor para a o array ou variavel... .join*/
-  /*formula para codificar... 
-  ((possição da letra)-65+33)%26+65*/
-  }
+  return retorno;
 }
-
-function decode(offset,string){
-  for( i = 0; i < string.length; i++){
-    let worD = string[i];
-    let worDNum = worD.charCodeAt(0);
-    return((worDNum-65+offset)%26+65);
+//função decode para letras 
+function decode(offset, mensagem) {
+  let result = "";
+//laço de repetição 
+  for (let j = 0; j < mensagem.length; j++) {
+    let CodAsc = mensagem.charCodeAt(j);
+    //inicio da condição 
+    //letra maiuscula
+    if (CodAsc >= 65 && CodAsc <= 90) {
+      result += String.fromCharCode(((CodAsc - 90 - offset) % 26) + 90);
+    }
+    //letra minuscula
+    else if (CodAsc >= 97 && CodAsc <= 122) {
+      result += String.fromCharCode(((CodAsc - 122 - offset) % 26) + 122);
+    }
+    //caractere especial e numeros 
+    else {
+      (CodAsc >= 32 && CodAsc <= 64);
+      result += String.fromCharCode(CodAsc);
+    }
   }
-  //formula para decodar
-
+  return result;
 }
