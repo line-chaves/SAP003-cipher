@@ -4,14 +4,15 @@ window.cipher = {
 };
 //função encode
 function encode(offset, mensagem) {
-  let retorno = "";
+  let retorno = ""; //string vazia
 
   //laço de repetição
   for (let i = 0; i < mensagem.length; i++) {
-    let codigoAsc = mensagem.charCodeAt(i);
-    //inicio da condição.
-    //letra maiuscula
+    let codigoAsc = mensagem.charCodeAt(i); //obtendo o codigo ascii do parâmetro mensagem
+    //condição que verifica se o offset é positivo
     if (offset > 0) {
+      //inicio das condições para letras A,a e @
+      //letra maiuscula
       if (codigoAsc >= 65 && codigoAsc <= 90) {
         retorno += String.fromCharCode(((codigoAsc - 65 + offset) % 26) + 65);
       }
@@ -25,8 +26,10 @@ function encode(offset, mensagem) {
         retorno += String.fromCharCode(codigoAsc);
       }
     }
+    //offset negativo
     else {
       (offset < 0);
+      //letra maiuscula
       if (codigoAsc >= 65 && codigoAsc <= 90) {
         retorno += String.fromCharCode(((codigoAsc - 90 + offset) % 26) +90);
       }
@@ -48,9 +51,10 @@ function decode(offset, mensagem) {
   //laço de repetição 
   for (let j = 0; j < mensagem.length; j++) {
     let CodAsc = mensagem.charCodeAt(j);
-    //inicio da condição 
-    //letra maiuscula
+    // condição para verificar se o offset é positivo
     if (offset>0) {
+      //inicio das condições A,a,@
+      //letra maiuscula
       if (CodAsc >= 65 && CodAsc <= 90) {
         result += String.fromCharCode(((CodAsc - 90 - offset) % 26) + 90);
       }
@@ -65,7 +69,8 @@ function decode(offset, mensagem) {
       }
     }
     else {
-      (offset<0);
+      (offset<0); //offset negativo
+      //Letra maiuscula
       if (CodAsc >= 65 && CodAsc <= 90) {
         result += String.fromCharCode(((CodAsc - 65 - offset) % 26) + 65);
       }
@@ -79,5 +84,5 @@ function decode(offset, mensagem) {
       }
     }
   }
-  return result;
+  return result; //retorno do decode
 }

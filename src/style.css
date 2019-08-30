@@ -1,29 +1,32 @@
-
+/*inserindo e editando a imagem*/
 body{
-  background-image: url(/home/laboratoria/Downloads/violencia-contra-mulher_3_0.jpg);
+  background-image: url(/home/laboratoria/Downloads/violencia-contra-mulher_3_0.jpg); /*inserir a imagem*/
   background-attachment: fixed; /* vai fixar a imagem, se acaso o usuario diminuir o zoom da pagina, a imagem não ira junto*/
   background-repeat: 100%; /* a imagem vai se ajustar a pagina*/
   background-repeat: no-repeat;/* não vai reppetir*/
-  background-position: 1200% 40%;
+  background-position: 1200% 40%; /*posição da imagem*/
 }
+/* alterando o titulo da pagina*/
 #tit {
     font-family: 'Pacifico', cursive; /*altera a fonte do titulo*/
-    color:rgba(146, 17, 151, 0.904);
+    color:rgba(146, 17, 151, 0.904); /* cor */
      text-align: center;
      width:360px;/*largura*/
      height: 70px;/*altura*/
-     margin: 70px 0 0 470px;
+     margin: 70px 0 0 470px; 
      font-size: 1cm;
    }
+   /*alteração dos botões*/
    .botao{
-     border-radius:15px;
-     font-family: 'Amatic SC', cursive;
-     font-size:26px;
+     border-radius:15px; /*arrendodar as bordas*/
+     font-family: 'Amatic SC', cursive; /* fonte*/
+     font-size:26px; 
      text-align: center;
      margin: 15px 15px 15px 15px;
      color: #f06abc;
      border: 3px ridge black;
    }
+   /*caixas de inputs*/
    .caixainput{
    border-radius:10px;/*arredondou as bordas*/
    font-size:0.6cm; 
@@ -31,11 +34,13 @@ body{
    margin: 10px 0 0 0px; 
    border: 3px ridge black;
    }
+   /* alterando tudo que esta na tag form*/
    form{
          text-align: center;
          width:323px;
-         margin: 30px 0 0 470px;/*a primeira parte negativa ajudou a subir a caixa. alterando a propriedade do meio, a caixa desce para a direita. o ultimo atributo, a caixa se move para a direita.*/
+         margin: 30px 0 0 470px
    }
+   /* alteração e criação da caixa de retorno */
    .palavra{
    border:5px groove #3b0303ec; /*tamanho da borda ... tipo de borda... cor da borda*/
     background: rgba(139, 36, 79, 0.781);
@@ -47,14 +52,17 @@ body{
      line-height: 50px;
      font-size: 0.5cm;
    }
+   /*alterando para quando o usuario passar o mouse sobre o botão, o mesmo deverar mudar de cor*/
    .botao:hover{
     background-color: rgb(1, 7, 12);
    }
+   /*alterando tudo que esta dentro da tag div*/
    div{
      color: rgb(71, 3, 40);
      font-family: 'Amatic SC', cursive;
      font-size: 0.8cm;
    }
+   /*alterando a fonte do texto e a caixa de texto*/
    .T{
      margin: -240px 0 600px 0 !important;
      border: 2px dotted #380223b7;
