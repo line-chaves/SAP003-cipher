@@ -38,8 +38,8 @@ function encode(offset, mensagem) {
         retorno += String.fromCharCode(((codigoAsc - 122 + offset) % 26) +122);
       }
       //caractere especial e numeros
-      {
-        retorno = mensagem;
+    else  {
+        retorno += mensagem;
       }
     }
   }
@@ -79,7 +79,7 @@ function decode(offset, mensagem) {
         result += String.fromCharCode(((CodAsc - 97 - offset) % 26) + 97);
       }
       //caractere especial e numeros
-      {
+    else {
         result = mensagem;
       }
     }
