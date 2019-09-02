@@ -1,8 +1,8 @@
 //adicionando eventos aos cliques dos botões 
-document.getElementById("btncodificar").addEventListener("click", dadosencode);
-document.getElementById("btndecodificar").addEventListener("click", desencode);
+document.getElementById("btncodificar").addEventListener("click", clickencode); //dispara a função clickencode quando o botão Codificar for clicado
+document.getElementById("btndecodificar").addEventListener("click", clickdesencode); //dispara a função clickdesencode quando o botão Descodificar for clicado
 //função de dados do encode
-function dadosencode() {
+function clickencode() {
   event.preventDefault();
   let mensagem = document.getElementById("str").value; //variavel responsavel por armazenar a palavra que o usuario digitar
   let deslocamento = Number(document.getElementById("num").value); //variavel responsavel por armazenar o deslocamento, o Number converteu o valor para numero
@@ -12,7 +12,7 @@ function dadosencode() {
   document.getElementById("retorno").innerHTML= criptografado; //enviando a resposta para a tela por meio do HTML
 }
 //função de dados do desencode
-function desencode () {
+function clickdesencode () {
   event.preventDefault();
   let mensagemD = document.getElementById("str").value;
   let deslocamentoD = Number(document.getElementById("num").value);
