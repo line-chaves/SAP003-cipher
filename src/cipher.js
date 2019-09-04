@@ -37,10 +37,10 @@ function encode(offset, mensagem) {
       if (codigoAsc >= 97 && codigoAsc <= 122) {
         retorno += String.fromCharCode(((codigoAsc - 122 + offset) % 26) +122);
       }
-      //caractere especial e numeros
+      /*/caractere especial e numeros
       else {
-        retorno += mensagem;
-      }
+        retorno = mensagem;
+      }*/
     }
   }
   return retorno;
@@ -79,9 +79,9 @@ function decode(offset, mensagem) {
         result += String.fromCharCode(((CodAsc - 97 - offset) % 26) + 97);
       }
       //caractere especial e numeros
-      else {
+      /* else {
         result = mensagem;
-      }
+      }*/
     }
   }
   return result; //retorno do decode
